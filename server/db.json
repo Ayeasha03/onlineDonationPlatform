@@ -1,0 +1,13 @@
+
+{
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "Help Build a School",
+      "description": "Raising funds for rural education",
+      "goal": 1000,
+      "raised": 300
+    }
+  ],
+  "donations": []
+}
