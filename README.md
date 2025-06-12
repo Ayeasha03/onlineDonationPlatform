@@ -28,28 +28,16 @@ A modern and responsive web app built with **React** and **Tailwind CSS**, allow
 
 ### 1. Clone the repository
 
-```bash
 git clone https://github.com/your-username/online-donation-platform.git
 cd online-donation-platform
 2. Install dependencies
-bash
-Copy
-Edit
 npm install
 3. Run JSON Server (mock backend)
-bash
-Copy
-Edit
 npx json-server --watch db.json --port 5000
 4. Start the React development server
-bash
-Copy
-Edit
 npm start
 📁 Folder Structure
 css
-Copy
-Edit
 src/
 ├── components/
 │   ├── AddCampaign.jsx
@@ -72,10 +60,6 @@ This project is free and open-source. Use it for learning or modify it for your 
 
 ✨ Author
 Made with ❤️ by Aishat
-
-yaml
-Copy
-Edit
 
 ---
 
