@@ -9,7 +9,7 @@ const AddCampaign = ({ onCampaignAdded }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/campaigns', {
+    fetch('https://onlinedonationplatform.onrender.com/campaigns', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

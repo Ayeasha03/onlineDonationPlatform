@@ -13,7 +13,7 @@ const App = () => {
   const [donations, setDonations] = useState({});
 
   useEffect(() => {
-    fetch('http://localhost:5000/campaigns')
+    fetch('https://onlinedonationplatform.onrender.com/campaigns')
       .then((res) => res.json())
       .then((data) => setCampaigns(data))
       .catch((err) => console.error('Error fetching campaigns:', err));
@@ -35,7 +35,7 @@ const App = () => {
   };
 
   const handleEditCampaign = (updatedCampaign) => {
-    fetch(`http://localhost:5000/campaigns/${updatedCampaign.id}`, {
+    fetch(`https://onlinedonationplatform.onrender.com/campaigns/${updatedCampaign.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const App = () => {
   };
 
   const handleDeleteCampaign = (id) => {
-    fetch(`http://localhost:5000/campaigns/${id}`, {
+    fetch(`https://onlinedonationplatform.onrender.com/campaigns/${id}`, {
       method: 'DELETE',
     })
       .then(() => {
