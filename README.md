@@ -71,7 +71,7 @@ Can be extended to include real payment integration like Stripe or Paystack
 This project is free and open-source. Use it for learning or modify it for your needs!
 
 ✨ Author
-Made with ❤️ by [Your Name]
+Made with ❤️ by Aishat
 
 yaml
 Copy
