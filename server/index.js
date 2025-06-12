@@ -31,6 +31,38 @@ app.post('/campaigns', (req, res) => {
   campaigns.push(newCampaign);
   res.status(201).json(newCampaign);
 });
+// Update campaign (PUT)
+app.put('/campaigns/:id', (req, res) => {
+  const campaignId = parseInt(req.params.id);
+  const { title, type, amount } = req.body;
+
+  const index = campaigns.findIndex((c) => c.id === campaignId);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Campaign not found' });
+  }
+
+  campaigns[index] = {
+    ...campaigns[index],
+    title,
+    type,
+    amount: Number(amount),
+  };
+
+  res.json(campaigns[index]);
+});
+
+// Delete campaign (DELETE)
+app.delete('/campaigns/:id', (req, res) => {
+  const campaignId = parseInt(req.params.id);
+
+  const index = campaigns.findIndex((c) => c.id === campaignId);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Campaign not found' });
+  }
+
+  const deleted = campaigns.splice(index, 1);
+  res.json({ message: 'Campaign deleted', campaign: deleted[0] });
+});
 
 
 app.listen(PORT, () => {
